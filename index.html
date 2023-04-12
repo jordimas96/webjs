@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+
+    <title>Jordi Mas Parramon</title>
+    <link rel="icon" type="image/x-icon" href="res/favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="utils/utils.js"></script>
+    <script src="tema.js"></script>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div class="page-loader" style="display: none;">
+        <!-- <button onclick="tema='matinada'; actTema();">Matinada</button>
+        <button onclick="tema='mati'; actTema();">Mati</button>
+        <button onclick="tema='tarda'; actTema();">Tarda</button>
+        <button onclick="tema='vespre'; actTema();">Vespre</button>
+        <button onclick="tema='nit'; actTema();">Nit</button> -->
+        <!-- <button onclick="modeFosc=!modeFosc; actTema();">Dark mode</button> -->
+
+        <div class="appbar">
+            <div class="botonsDarkMode">
+                <button onclick="btnDarkMode_click()" class="botoDarkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                <button onclick="btnAutoDarkMode_click()" class="botoDarkMode botoAutoMode" style="display:none;"><b>A</b></button>
+            </div>
+
+            <select name="idioma" id="idioma" class="select-idioma" onchange="canviarIdioma(this.value)">
+                <option value="ca">Català</option>
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+
+
+        <div class="content">
+            <div class="title h1 mt-0 mb-4">Jordi Mas Parramon</div>
+
+            <div class="row">
+                <div class="col-5 col-sm-4 p-3 p-sm-4 container-foto">
+                    <div class="scroller-div">
+                        <img src="res/Foto carnet 2020.jpg" alt="Foto" class="foto foto-scroll">
+                    </div>
+                </div>
+                <div class="col-7 col-sm-8 p-3 p-sm-4 container-text-bio">
+                    <p>
+                        <span lang="ca">Sóc en Jordi Mas, un apassionat programador amb experiència en Angular, CSS, Javascript, C# i Python, entre altres. En aquesta web, trobaràs informació sobre la meva experiència, habilitats i projectes, així com la meva informació de contacte perquè puguem conversar sobre com et puc ajudar amb el teu proper projecte.</span>
+                        
+                        <span lang="es">Soy Jordi Mas, un apasionado programador con experiencia en Angular, CSS, Javascript, C# y Python, entre otros. En esta web, encontrarás información sobre mi experiencia, habilidades y proyectos, así como mi información de contacto para que podamos conversar sobre cómo puedo ayudarte con tu próximo proyecto.</span>
+
+                        <span lang="en">I am Jordi Mas, a passionate programmer with experience in Angular, CSS, Javascript, C# and Python, among others. On this site, you'll find information about my past experience, skills, and projects, as well as my contact information so we can discuss about how I can help with your next project.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- In2art -->
+            <div id="in2art" class="group">
+                <h3>
+                    In2art
+                    <a href="https://in2.art/" class="link-img ml-2"><img src="res/icons/In2art.png" alt="In2art" class="title-icon inv-dark"></a>
+                </h3>
+                <p class="mb-1">
+                    <span lang="ca">Principal desenvolupador d'una xarxa social a In2Art. Vaig ser responsable del frontend, disseny i part del backend.
+                        A més, estic orgullós de dir que vaig desenvolupar la pàgina des de zero utilitzant la meva experiència a Angular, CSS i TypeScript.<br>
+                        La primera part del projecte, quan vaig fer l'estructura i l'organització del frontend, la vaig desenvolupar en solitari. A mesura que la web va anar creixent i es van afegir noves seccions, vaig poder dividir la càrrega de treball entre estudiants de pràctiques als que jo mateix vaig formar en Angular, TypeScript i CSS. Junts vam treballar en equip per crear una veritable obra d'art.</span>
+
+                    <span lang="es">Principal desarrollador de una red social en In2Art. Fui responsable del frontend, diseño y parte del backend.
+                        Además, estoy orgulloso de decir que desarrollé la página desde cero utilizando mi experiencia en Angular, CSS y TypeScript.<br>
+                        La primera parte del proyecto, cuando hice la estructura y organización del frontend, la desarrollé en solitario. A medida que la web fue creciendo y se añadieron nuevas secciones, pude dividir la carga de trabajo entre estudiantes de prácticas a los que yo mismo formé en Angular, TypeScript y CSS. Juntos, trabajamos en equipo para crear una verdadera obra de arte.</span>
+
+                    <span lang="en">Main developer of a social network at In2art. I was responsible for the frontend, design and part of the backend.
+                        Also, I'm proud to say that I built the page from scratch using my experience in Angular, CSS, and TypeScript.<br>
+                        The first part of the project, when I did the structure and organization of the frontend, I developed it alone. As the web grew and new sections were added, I splitted the workload among interns I trained myself in Angular, TypeScript, and CSS. Together, we worked as a team to create a true work of art.</span>
+
+                </p>
+                <span lang="ca"><a href="https://in2.art/es">in2.art</a></span>
+                <span lang="es"><a href="https://in2.art/es">in2.art</a></span>
+                <span lang="en"><a href="https://in2.art/en">in2.art</a></span>
+            </div>
+
+            <!-- Matic -->
+            <div id="matic" class="group">
+                <h3>
+                    Matic
+                    <a href="https://www.matic.cat/" class="link-img ml-2"><img src="res/icons/Matic.png" alt="Matic" class="title-icon rounded"></a>
+                </h3>
+                <p class="mb-1">
+                    <span lang="ca">Durant la meva experiència laboral a Matic Enginyeria Informàtica, vaig ser responsable de programar tant el frontend com el backend d'un sistema CRM dissenyat per a la gestió de clients, manteniments i molls de càrrega de l'empresa SystemBlock. Aquest sistema integra una web, una app Android i un programa UWP per a Windows 10.<br><br>
+                        A més, vaig dur a terme el manteniment i millora de <a href="https://www.ocineurbanxmadrid.es/">diverses pàgines web</a> per a <a href="https://www.ocine.es/">Ocine</a>, cosa que va incloure la creació de noves seccions, pantalles i funcions, utilitzant CSS, Javascript, PHP i Joomla.<br>
+                        També vaig desenvolupar pàgines web específiques per a les pantalles de cartelleres a múltiples locals de cinemes a Madrid.</span>
+                        
+                    <span lang="es">Durante mi experiencia laboral en Matic Enginyeria Informàtica, fui responsable de programar tanto el frontend como el backend de un sistema CRM diseñado para la gestión de clientes, mantenimientos y muelles de carga de la empresa SystemBlock. Este sistema integra un sitio web, una app Android y un programa UWP para Windows 10.<br><br>
+                        Además, llevé a cabo el mantenimiento y mejora de <a href="https://www.ocineurbanxmadrid.es/">varias páginas web</a> para <a href="https://www.ocine.es/">Ocine</a>, lo que incluyó la creación de nuevas secciones, pantallas y funciones, utilizando CSS, Javascript, PHP y Joomla.<br>
+                        También desarrollé páginas web específicas para las pantallas de carteleras en múltiples locales de cines en Madrid.</span>
+                        
+                    <span lang="en">During my work experience at Matic Enginyeria Informàtica, I was responsible for programming both the frontend and the backend of a CRM system designed for customer, maintenance, and loading docks management for the company SystemBlock. The system integrates a website, an Android app and a UWP Windows 10 program.<br><br>
+                        In addition, I carried out maintenance and improvement of <a href="https://www.ocineurbanxmadrid.es/">several webpages</a> for <a href="https://www.ocine.es/">Ocine</a>, which included the creation of new sections, screens and functions, using CSS, Javascript, PHP and Joomla.<br>
+                        I also developed specific web pages for billboard screens in multiple cinema locations in Madrid.</span>
+                </p>
+                <span lang="ca"><a href="https://www.matic.cat/">www.matic.cat</a></span>
+                <span lang="es"><a href="https://www.matic.cat/es/inicio/">www.matic.cat</a></span>
+                <span lang="en"><a href="https://www.matic.cat/es/inicio/">www.matic.cat</a></span>
+            </div>
+
+            <!-- Android Apps -->
+            <div id="android" class="group">
+                <h3>
+                    <span lang="ca">Apps Android</span>
+                    <span lang="es">Apps Android</span>
+                    <span lang="en">Android Apps</span>
+                    <a href="https://www.android.com/" class="link-img"><img src="res/icons/Android.png" alt="Android" class="title-icon p-1"></a>
+                </h3>
+                <p class="mb-1">
+                    <span lang="ca">Quan tinc temps lliure, m'agrada desenvolupar aplicacions per a Android i jocs per a la Play Store, ja sigui en Android Studio com en Unity o Cordova. Per fer-ho, utilitzo Java, Kotlin, C# i Javascript.</span>
+                    
+                    <span lang="es">Cuando tengo tiempo libre, me gusta desarrollar aplicaciones para Android y juegos para la Play Store, ya sea en Android Studio como en Unity o Cordova. Para hacerlo, uso Java, Kotlin, C# y Javascript.</span>
+                    
+                    <span lang="en">When I have free time, I like to develop Android apps and games for the Play Store, either in Android Studio, Unity or Cordova. To do it I use Java, Kotlin, C# and Javascript.</span>
+                </p>
+                <span lang="ca"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Les meves apps a Google Play</a></span>
+                <span lang="es"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">Mis apps en Google Play</a></span>
+                <span lang="en"><a href="https://play.google.com/store/apps/developer?id=Jordi+Mas+Parramon">My apps in Google Play</a></span>
+            </div>
+            
+            <!-- Tasker -->
+            <div id="tasker" class="group">
+                <h3>
+                    <span lang="ca">Projectes TaskerNet</span>
+                    <span lang="es">Proyectos TaskerNet</span>
+                    <span lang="en">TaskerNet projects</span>
+                    <a href="https://tasker.joaoapps.com/" class="link-img ml-1"><img src="res/icons/Tasker.png" alt="Tasker" class="title-icon"></a>
+                </h3>
+                <p class="mb-1">
+                    <span lang="ca">Una altra de les meves aficions és experimentar amb Android, en específic trastejar amb diferents versions i ampliar-ne les funcionalitats. Una de les maneres de fer-ho és amb <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app d'automatització de tasques en Android que ofereix una infinitat de possibilitats. A través d'aquesta aplicació, he creat nombrosos projectes amb l'objectiu de millorar i ampliar les capacitats d'Android, i he publicat aquells que podrien resultar útils per a altres usuaris.</span>
+                    
+                    <span lang="es">Otra de mis aficiones es experimentar con Android, en específico trastear con diferentes versiones y ampliar sus funcionalidades. Una de las maneras de hacerlo es con <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, una app de automatización de tareas en Android que ofrece una infinidad de posibilidades. A través de esta aplicación, he creado numerosos proyectos con el fin de mejorar y ampliar las capacidades de Android, y he publicado aquellos que podrían resultar útiles para otros usuarios.</span>
+                    
+                    <span lang="en">Another of my hobbies is experimenting with Android, specifically tinkering with different versions and expanding its functionality. One way to do this is with <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, an automation app of tasks in Android that offers an infinity of possibilities. Through this app, I have created numerous projects to enhance and expand the functionality of Android, and I have published the most useful and straightforward ones for other users.</span>
+                </p>
+                <a href="https://taskernet.com/?user=AS35m8mRntivpH1gAMw7ymN993wqjIo0bD6%2FSevikpiMYXceQJ%2BATvjOUxxvfzAbynKD">
+                    <span lang="ca">Projectes públics de Jordi Mas</span>
+                    <span lang="es">Proyectos públicos de Jordi Mas</span>
+                    <span lang="en">Jordi Mas's Public Shares</span>
+                </a>
+            </div>
+
+
+            <!-- Mad Jumpgate -->
+            <div id="mad-jumpgate" class="group">
+                <h3>
+                    <span lang="ca">Projecte final 2n DAM</span>
+                    <span lang="es">Proyecto final 2do DAM</span>
+                    <span lang="en">Final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM)</span>
+                    - Mad Jumpgate
+                    <a href="https://jmaspgames.itch.io/mad-jumpgate" class="link-img ml-1"><img src="res/icons/Mad-jumpgate.png" alt="Mad Jumpgate" class="title-icon rounded"></a>
+                </h3>
+                <p class="mb-1">
+                    <span lang="ca">Aquest és el meu projecte final del segon curs del Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM).
+                        Em va portar 2 setmanes de feina crear aquest FPS des de zero, amb Unity. Des del moviment de la càmara i del jugador, passant per les mecàniques de cada tipus d'arma (tant l'usuari con els enemics), fins a gestionar l'inventari format per les bales i els subministres.</span>
+                    
+                    <span lang="es">Éste es mi proyecto final del segundo curso del Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM).
+                        Me llevó 2 semanas de trabajo crear ese FPS desde cero, con Unity. Desde el movimiento de la cámara y del jugador, pasando por las mecánicas de cada tipo de arma (tanto el usuario como los enemigos), hasta gestionar el inventario formado por las balas y los suministros.</span>
+                    
+                    <span lang="en">This is my final project for the second year of the Higher Cycle of Multiplatform Application Development (DAM). It took me 2 weeks of work to create this FPS from scratch, using Unity. From the movement of the camera and the player, through the mechanics of shooting each type of weapon (both the user and the enemies), to managing the inventory consisting of bullets and supplies.</span>
+                </p>
+                <iframe src="https://itch.io/embed/2011884" width="552" height="167" frameborder="0" class="game mt-2"><a href="https://jmaspgames.itch.io/mad-jumpgate">Mad Jumpgate by jmaspgames</a></iframe>
+
+            </div>
+            
+
+            <div id="contact" class="group">
+                <h3>
+                    <span lang="ca">Contacte</span>
+                    <span lang="es">Contacto</span>
+                    <span lang="en">Contact</span>
+                </h3>
+                <div class="px-2 py-4" style="text-align: center;">
+                    <a href="https://github.com/jordimas96" class="link-img mr-3">
+                        <img src="res/icons/contact/GitHub.png" alt="GitHub" title="GitHub" class="title-icon inv-dark">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jordi-mas-parramon-80863a11b/" class="link-img mr-3">
+                        <img src="res/icons/contact/LinkedIn.png" alt="LinkedIn" title="LinkedIn" class="title-icon">
+                    </a>
+                    <a href="mailto:xordimas@gmail.com" class="link-img inv-dark mr-3">
+                        <img src="res/icons/contact/Email.png" alt="Email" title="Email me!" class="title-icon p-1">
+                    </a>
+                    <a href="res/CV Jordi Mas Parramon ENG.pdf" class="link-img inv-dark">
+                        <img src="res/icons/contact/CV.png" alt="Curriculum Vitae" title="My Curriculum Vitae" class="title-icon">
+                    </a>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

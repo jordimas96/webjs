@@ -1,0 +1,229 @@
+html {
+    font-family: Arial, sans-serif;
+    color-scheme: dark;
+}
+html.light {
+    color-scheme: light;
+}
+
+/* Estils generals dark mode */
+body {
+    /* --fons: rgb(0, 31, 31); */
+    /* --text: rgb(224, 255, 255); */
+    --fons: rgb(16, 16, 16);
+    --text: rgb(255, 255, 255);
+    --link: #5fc2ff;
+    --link-hover: #2b94d6;
+}
+.light body {
+    --fons: rgb(255, 255, 255);
+    --text: rgb(16, 16, 16);
+    --link: #0089ff;
+    --link-hover: #0065bd;
+}
+
+/* .dark::-webkit-scrollbar { background-color: #333; }  
+.dark::-webkit-scrollbar-thumb { background-color: #555; } */
+
+/* Dark / Default */
+.matinada body {
+    --fons: rgb(37, 37, 0);
+    --text: rgb(255, 255, 209);
+}
+.mati body {
+    --fons: rgb(0, 26, 39);
+    --text: rgb(186, 232, 255);
+}
+.tarda body {
+    --fons: rgb(34, 19, 0);
+    --text: rgb(255, 236, 210);
+}
+.vespre body {
+    --fons: rgb(0, 0, 42);
+    --text: rgb(217, 217, 255);
+}
+.nit body {
+    --fons: rgb(16, 16, 16);
+    --text: rgb(255, 255, 255);
+}
+/* Light */
+.light.matinada body {
+    --fons: rgb(255, 255, 209);
+    --text: rgb(37, 37, 0);
+}
+.light.mati body {
+    --fons: rgb(186, 232, 255);
+    --text: rgb(0, 26, 39);
+}
+.light.tarda body {
+    --fons: rgb(255, 236, 210);
+    --text: rgb(34, 19, 0);
+}
+.light.vespre body {
+    --fons: rgb(217, 217, 255);
+    --text: rgb(0, 0, 42);
+}
+.light.nit body {
+    --fons: rgb(255, 255, 255);
+    --text: rgb(16, 16, 16);
+}
+
+
+
+body {
+    background: var(--fons);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+.botonsDarkMode {
+    width: fit-content;
+    margin: 0.5rem;
+}
+.botoDarkMode {
+    background-color: #fff4;
+    color: var(--text);
+    border: none;
+    border-radius: 10000px;
+    cursor: pointer;
+    padding: 0.5rem 1.4rem;
+    font-size: 16pt;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.botoDarkMode:focus {
+    outline: none;
+}
+.light .botoDarkMode {
+    background-color: #0002;
+}
+
+.appbar {
+    display: flex;
+    justify-content: space-between;
+}
+.select-idioma {
+    background-color: var(--fons);
+    color: var(--text);
+    border-color: var(--text);
+    border-radius: 5px;
+    margin: auto 1rem;
+    padding: 0.25rem 1rem;
+    font-size: large;
+}
+  
+
+.content {
+    max-width: 940px;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.title {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.group {
+    margin-top: 3rem;
+}
+
+.container-foto {
+    padding: 1rem;
+    /* border-radius: 1000px; */
+}
+
+
+.scroller-div {
+    border-radius: 1000px;
+    overflow: hidden;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15) translateY(6%);
+}
+
+.container-text-bio {
+    padding: 1rem;
+}
+
+.title-icon {
+    height: 2rem;
+}
+.inv-dark {
+    transition: filter 0.3s ease;
+}
+.light .inv-dark {
+    filter: invert(1);
+}
+.dark .inv-dark-2 {
+    filter: invert(1);
+}
+
+
+
+/* Fixes */
+a:not(.link-img):link, a:not(.link-img):visited {
+    color: var(--link);
+    text-decoration: none;
+}
+a:not(.link-img):hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+a.link-img {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.title-icon {
+    display: block;
+}
+
+iframe.game {
+    max-width: 100%;
+}
+
+
+
+img, .nodrag {
+    -webkit-user-drag: none;
+     -khtml-user-drag: none;
+       -moz-user-drag: none;
+         -o-user-drag: none;
+}
+
+img, .noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+/* #region MEDIA QUERIES */
+/* Mòbil */
+@media only screen and (max-width: 576px) {
+    .title {
+        font-size: 2rem;
+    }
+    .container-foto, .container-text-bio {
+        padding: 2rem;
+    }
+
+
+}
+/* PC */
+/* @media only screen and (min-width: 576px) {
+} */
+
+
+/* @media only screen and (max-width: 576px) { // Mòbil // } */
+/* @media only screen and (min-width: 576px) { // PC // } */
+/* #endregion MEDIA QUERIES */
